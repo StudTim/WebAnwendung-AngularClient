@@ -1,0 +1,19 @@
+
+:host {
+  font-size: 16px;
+}
+
+.entry {
+  .key {
+  }
+
+  &.comment {
+    .value {
+      box-shadow: 0px 0px 4px 0px rgba(24,24,24,0.75) inset;
+      -webkit-box-shadow: 0px 0px 4px 0px rgba(24,24,24,0.75) inset;
+      -moz-box-shadow: 0px 0px 4px 0px rgba(24,24,24,0.75) inset;
+      padding: 16px;
+      margin-top: 8px;
+    }
+  }
+}

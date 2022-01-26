@@ -1,0 +1,45 @@
+mat-form-field {
+  background-color: #303030;
+  width: 100%;
+  padding: 0 14px;
+  max-width: calc(100% - 28px);
+  height: 56px;
+  min-height: 56px;
+  max-height: 56px;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-selection-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+mat-list-option {
+  transition-duration: 0.8s;
+}
+
+:host::ng-deep {
+  .mat-list-text {
+    transition: padding 0.4s linear;
+  }
+
+  .identifier {
+    font-size: 11px !important;
+    color: #979797;
+  }
+
+  .mat-list-single-selected-option {
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+
+    .mat-list-text {
+      padding-left: 20px !important;
+    }
+  }
+}

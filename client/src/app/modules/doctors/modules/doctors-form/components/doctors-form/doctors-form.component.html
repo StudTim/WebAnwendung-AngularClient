@@ -1,0 +1,52 @@
+<div class="doctors-form-component" fxLayout="column">
+  <mat-form-field>
+    <mat-placeholder>Vorname</mat-placeholder>
+    <input matInput
+           type="text"
+           [formControl]="doctorsFormValidationService.fields.controls.firstname"
+           id="doctors-firstname"
+           required />
+    <mat-error *ngIf="doctorsFormValidationService.firstNameErrors">
+      {{doctorsFormValidationService.firstNameErrors}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nachname</mat-label>
+    <input matInput
+           placeholder="Nachname"
+           type="text"
+           [formControl]="doctorsFormValidationService.fields.controls.lastname"
+           required
+           id="doctors-lastname" />
+    <mat-error *ngIf="doctorsFormValidationService.lastNameErrors">
+      {{doctorsFormValidationService.lastNameErrors}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>
+      Identifier
+    </mat-label>
+    <input matInput
+           placeholder="Identifier"
+           type="text"
+           [formControl]="doctorsFormValidationService.fields.controls.identifier"
+           id="doctors-identifier"
+           required />
+    <mat-error *ngIf="doctorsFormValidationService.identifierErrors">
+      {{doctorsFormValidationService.identifierErrors}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Field</mat-label>
+    <textarea matInput
+              placeholder="Fachgebiet"
+              [formControl]="doctorsFormValidationService.fields.controls.field"></textarea>
+    <mat-error *ngIf="doctorsFormValidationService.fieldErrors">
+      {{doctorsFormValidationService.fieldErrors}}
+    </mat-error>
+  </mat-form-field>
+
+</div>

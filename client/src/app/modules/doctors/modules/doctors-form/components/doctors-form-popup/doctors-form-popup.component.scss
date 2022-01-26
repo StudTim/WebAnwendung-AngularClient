@@ -1,0 +1,23 @@
+form {
+  position: relative;
+}
+
+mat-progress-bar {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  height: 3px;
+}
+
+:host::ng-deep {
+  mat-progress-bar {
+    svg {
+      fill: transparent;
+    }
+
+    .mat-progress-bar-buffer.mat-progress-bar-element {
+      background-color: transparent;
+    }
+  }
+}

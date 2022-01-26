@@ -1,0 +1,6 @@
+<div class="global-search" [ngClass]="{visible: showSearchBar.value}">
+    <button mat-icon-button type="button" (click)="onSearchClicked()">
+        <mat-icon>search</mat-icon>
+    </button>
+    <input type="text" (blur)="onInputBlur()" [appFocus]="focusInput.value" [(ngModel)]="searchText" (keyup)="onInputKeyUp()" />
+</div>

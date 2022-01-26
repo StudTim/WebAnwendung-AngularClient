@@ -1,0 +1,22 @@
+<mat-toolbar class="toolbar">
+  <button mat-icon-button (click)="showGlobalMenu=true">
+    <mat-icon>
+      menu
+    </mat-icon>
+  </button>
+
+  <button mat-icon-button>
+    <mat-icon>
+      login
+    </mat-icon>
+  </button>
+  <span class="spacer"></span>
+  Patientenverwaltung: {{uiService.pageTitle.value}}
+  <span class="spacer"></span>
+  <app-global-search></app-global-search>
+
+
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+<app-global-menu *ngIf="showGlobalMenu" (close)="showGlobalMenu=false"></app-global-menu>

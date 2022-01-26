@@ -1,0 +1,37 @@
+<div class="doctors-details animated fadeIn" fxLayout="column" fxLayoutGap="16px">
+
+  <div class="entry" fxLayout="row">
+    <div class="key" fxFlex="150px">Identifikation:</div>
+    <div class="value">{{doctors.identifier}}</div>
+  </div>
+
+  <div class="entry" fxLayout="row">
+    <div class="key" fxFlex="150px">Nachname:</div>
+    <div class="value">{{doctors.lastname}}</div>
+  </div>
+
+  <div class="entry" fxLayout="row">
+    <div class="key" fxFlex="150px">Vorname:</div>
+    <div class="value">{{doctors.firstname}}</div>
+  </div>
+
+
+  <div class="entry" fxLayout="row">
+    <div class="key" fxFlex="150px">Fachbereich:</div>
+    <div class="value">{{doctors.field}}</div>
+  </div>
+
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Zugewiesene Patienten
+      </mat-panel-title>
+      <mat-panel-description>
+        Auflistung aller Patienten
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-doctors-patients-list></app-doctors-patients-list>
+  </mat-expansion-panel>

@@ -1,0 +1,8 @@
+<app-list [items]="doctorsPatientsRestService.items" (onAddClicked)="onAddClicked()">
+  <ng-template let-item #listEntry>
+    <div>
+      <div>{{item.lastname}}, {{item.firstname}}</div>
+      <span class="identifier">Id: {{item.identifier}}</span>
+    </div>
+  </ng-template>
+</app-list>

@@ -1,0 +1,36 @@
+<mat-expansion-panel fxLayout="column">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Erstellt: {{patientHistory.created_at}}
+    </mat-panel-title>
+    <mat-panel-description>
+      Zusammenfassung {{patientHistory.shortEntry}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <div class="entry" fxLayout="row">
+    <div class="key" fxFlex="100px">HistoryID:</div>
+    <div class="value">{{patientHistory.id}}</div>
+  </div>
+
+  <div class="entry" fxLayout="row">
+    <div class="key" fxFlex="100px">Beschreibung:</div>
+    <div class="value">{{patientHistory.textEntry}}</div>
+  </div>
+
+  <div class="entry comment" fxLayout="row">
+    <div class="key" fxFlex="100px">Erstellt von:</div>
+    <div class="value">{{patientHistory.created_by}}</div>
+  </div>
+
+  <div class="entry comment" fxLayout="row">
+    <div class="key" fxFlex="100px">Aktualisiert:</div>
+    <div class="value">{{patientHistory.updated_by}} am {{patientHistory.updated_at}}</div>
+  </div>
+
+  <span class="spacer"></span>
+  <button mat-button (click)="onDeleteClicked()">
+    Eintrag Löschen&nbsp;<mat-icon>delete</mat-icon>
+  </button>
+
+</mat-expansion-panel>

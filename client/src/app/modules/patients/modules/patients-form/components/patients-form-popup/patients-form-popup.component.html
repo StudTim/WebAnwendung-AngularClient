@@ -1,0 +1,25 @@
+<form [formGroup]="patientsFormValidationService.fields">
+    <h2 mat-dialog-title>Patienten erstellen</h2>
+    <mat-dialog-content class="mat-typography">
+      <app-patients-form></app-patients-form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button
+        (click)="onAbortClicked()"
+        type="button"
+        mat-button>
+            <mat-icon>close</mat-icon>&nbsp;Abbrechen</button>
+      <button 
+        (click)="onSaveClicked()" 
+        mat-button 
+        cdkFocusInitial
+        type="submit"
+        [color]="patientsFormValidationService.fields.valid ? 'primary' : null" 
+        [disabled]="!patientsFormValidationService.fields.valid">
+            <mat-icon>save</mat-icon>&nbsp;Speichern
+        </button>
+    </mat-dialog-actions>
+    <mat-progress-bar mode="determinate" [value]="patientsFormValidationService.percentageCompletion"></mat-progress-bar>
+</form>
+
+

@@ -1,0 +1,12 @@
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-toolbar {
+    height: 46px;
+    max-height: 46px;
+    min-height: 46px;
+}

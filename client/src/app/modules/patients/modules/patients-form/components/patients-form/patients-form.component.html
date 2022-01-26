@@ -1,0 +1,67 @@
+<div class="patients-form-component" fxLayout="column">
+  <mat-form-field>
+    <mat-placeholder>Vorname</mat-placeholder>
+    <input matInput
+           type="text"
+           [formControl]="patientsFormValidationService.fields.controls.firstname"
+           id="patient-firstname"
+           required />
+    <mat-error *ngIf="patientsFormValidationService.firstNameErrors">
+      {{patientsFormValidationService.firstNameErrors}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nachname</mat-label>
+    <input matInput
+           placeholder="Nachname"
+           type="text"
+           [formControl]="patientsFormValidationService.fields.controls.lastname"
+           required
+           id="patient-lastname" />
+    <mat-error *ngIf="patientsFormValidationService.lastNameErrors">
+      {{patientsFormValidationService.lastNameErrors}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>
+      Identifier
+    </mat-label>
+    <input matInput
+           placeholder="Identifier"
+           type="text"
+           [formControl]="patientsFormValidationService.fields.controls.identifier"
+           id="patient-identifier"
+           required />
+    <mat-error *ngIf="patientsFormValidationService.identifierErrors">
+      {{patientsFormValidationService.identifierErrors}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>
+      Zuständiger Doc
+    </mat-label>
+    <input matInput
+           placeholder="DoctorId"
+           type="text"
+           [formControl]="patientsFormValidationService.fields.controls.patientDoctorId"
+           id="patient-patientDoctorId"
+           required />
+    <mat-error *ngIf="patientsFormValidationService.patientDoctorIdErrors">
+      {{patientsFormValidationService.patientDoctorIdErrors}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Kommentar</mat-label>
+    <textarea matInput
+              placeholder="Kommentar"
+              [formControl]="patientsFormValidationService.fields.controls.patComment"></textarea>
+    <mat-error *ngIf="patientsFormValidationService.commentErrors">
+      {{patientsFormValidationService.commentErrors}}
+    </mat-error>
+  </mat-form-field>
+
+</div>

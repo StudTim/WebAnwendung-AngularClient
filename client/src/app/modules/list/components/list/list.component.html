@@ -1,0 +1,22 @@
+<mat-selection-list #patientsList [multiple]="false">
+  <ng-container *ngFor="let item of items">
+    <mat-list-option (click)="onEntryClicked.next(item)" [selected]="isSelected">
+      <ng-container [ngTemplateOutlet]="listEntryRef" [ngTemplateOutletContext]="{$implicit:item}"></ng-container>
+    </mat-list-option>
+    <mat-divider></mat-divider>
+
+  </ng-container>
+</mat-selection-list>
+
+<mat-toolbar color="primary" class="toolbar">
+  <span class="spacer"></span>
+  <div>
+    <button mat-button (click)="onDeleteClicked.next()">
+      Löschen&nbsp;<mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <span class="spacer"></span>
+  <button mat-button (click)="onAddClicked.next()">
+    Hinzufügen&nbsp;<mat-icon>add</mat-icon>
+  </button>
+</mat-toolbar>

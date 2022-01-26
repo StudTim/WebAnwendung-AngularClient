@@ -1,0 +1,45 @@
+<div id="global-menu" class="animate__animated animate__zoomIn" fxLayout="column" (click)="onCloseClicked()">
+
+  <div class="spacerRow" fxLayout="row">
+
+  </div>
+
+  <div class="header" fxLayout="row" fxLayoutAlign="center" (click)="onInputClicked($event)">
+    <div class="global-menu-search">
+      <button mat-icon-button type="button">
+        <mat-icon>search</mat-icon>
+      </button>
+      <input type="text" [appFocus]="true" [(ngModel)]="searchText" (keyup)="onInputKeyUp()" placeholder="Apps Durchsuchen" />
+    </div>
+  </div>
+
+  <div class="body" fxLayout="row" fxLayoutGap="16px">
+
+    <div class="appsOverviewBody" fxLayout="row" fxLayoutAlign="center">
+
+      <div class="singleApp" fxLayout="column" routerLinkActive="active">
+        <button mat-raised-button color="primary" aria-label="Patienten Icon" routerLink="/patients">
+          <mat-icon>airline_seat_individual_suite</mat-icon>
+          Patienten
+        </button>
+      </div>
+
+      <div class="singleApp" fxLayout="column" routerLinkActive="active">
+        <button mat-raised-button color="primary" aria-label="Doctor Icon" routerLink="/doctors">
+          <mat-icon>medical_services</mat-icon>
+          Doktoren
+        </button>
+      </div>
+
+      <div class="singleApp" fxLayout="column" routerLinkActive="active">
+        <button mat-raised-button color="primary" aria-label="Nurses Icon" routerLink="/nurses">
+          <mat-icon>people</mat-icon>
+          Pfleger
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

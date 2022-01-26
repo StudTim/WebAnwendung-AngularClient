@@ -1,0 +1,24 @@
+mat-drawer-container {
+  height: 100%;
+
+  mat-drawer {
+    overflow: hidden;
+    width: 100%;
+
+    @media screen and (min-width: 960px) {
+      max-width: 400px;
+    }
+  }
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+:host::ng-deep {
+  .mat-drawer-inner-container {
+    overflow: hidden;
+  }
+}

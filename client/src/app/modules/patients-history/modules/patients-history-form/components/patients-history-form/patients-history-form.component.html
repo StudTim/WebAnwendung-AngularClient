@@ -1,0 +1,27 @@
+<div class="patients-history-form-component" fxLayout="column">
+  <mat-form-field>
+    <mat-placeholder>Short Entry</mat-placeholder>
+    <input matInput
+           type="text"
+           [formControl]="patientsFormValidationService.fields.controls.firstname"
+           id="patient-history-shortEntry"
+           required />
+    <mat-error *ngIf="patientsFormValidationService.firstNameErrors">
+      {{patientsFormValidationService.firstNameErrors}}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Long Entry</mat-label>
+    <input matInput
+           placeholder="Long Entry"
+           type="text"
+           [formControl]="patientsFormValidationService.fields.controls.lastname"
+           required
+           id="patients-history-longEntry" />
+    <mat-error *ngIf="patientsFormValidationService.lastNameErrors">
+      {{patientsFormValidationService.lastNameErrors}}
+    </mat-error>
+  </mat-form-field>
+
+</div>

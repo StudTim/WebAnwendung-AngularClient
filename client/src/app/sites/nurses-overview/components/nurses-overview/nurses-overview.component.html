@@ -1,0 +1,9 @@
+<mat-drawer-container>
+
+  <mat-drawer #drawer mode="side" [opened]="true">
+    <app-nurses-list></app-nurses-list>
+  </mat-drawer>
+
+  <app-nurses-details *ngIf="selectedNurse"></app-nurses-details>
+
+</mat-drawer-container>

@@ -1,0 +1,8 @@
+<app-list [items]="patientRestService.items | patientsFilter: globalSearchService.plainText.value" (onEntryClicked)="onClick($event)" (onAddClicked)="onAddClicked()" (onDeleteClicked)="onDeleteClicked()">
+  <ng-template let-item #listEntry>
+    <div>
+      <div>{{item.lastname}}, {{item.firstname}}</div>
+      <span class="identifier">Id: {{item.identifier}}</span>
+    </div>
+  </ng-template>
+</app-list>

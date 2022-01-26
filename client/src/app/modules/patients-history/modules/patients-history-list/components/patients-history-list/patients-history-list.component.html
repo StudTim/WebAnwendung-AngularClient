@@ -1,0 +1,13 @@
+<mat-selection-list #patientHistoryList [multiple]="false">
+
+  <app-patients-history-list-item *ngFor="let patientHistory of patientHistoryRestService.items" [patientHistory]="patientHistory">
+  </app-patients-history-list-item>
+
+  <mat-toolbar color="primary" class="toolbar">
+    <span class="spacer"></span>
+    <button mat-button (onAddClicked)="onAddClicked()">
+      Historie Hinzufügen&nbsp;<mat-icon>add</mat-icon>
+    </button>
+  </mat-toolbar>
+
+</mat-selection-list>
